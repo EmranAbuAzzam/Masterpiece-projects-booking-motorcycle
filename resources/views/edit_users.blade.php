@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@extends('layouts.nav')
 @section('content')
 
 
@@ -18,11 +18,11 @@
 
         <div class="card">
             <div class="card-header">Edite User details
-                <a href="{{ route('users.index') }}" class="btn btn-primary btn-sm float-end"> Go Back</a>
+                <a href="{{ route('admin.users.index') }}" class="btn btn-primary btn-sm float-end"> Go Back</a>
             </div>
 
             <div class="card-body">
-                <form method="post" action="{{ route('users.update', $user->id) }}">
+                <form method="post" action="{{ route('admin.users.update', $user->id) }}">
                     @csrf
                     @method('PATCH')
 

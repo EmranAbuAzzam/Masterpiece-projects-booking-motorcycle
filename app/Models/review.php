@@ -13,8 +13,8 @@ class review extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function room(){
-        return $this->belongsTo(room::class);
+    public function motorcycle(){
+        return $this->belongsTo(motorcycle::class);
     }
 
 }

@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
+use App\Models\category;
+use App\Models\contactus;
 use App\Models\Product;
+use App\Models\review;
+use App\Models\motorcycle;
 use App\Models\User;
 
 class HomeController extends Controller
@@ -25,11 +30,21 @@ class HomeController extends Controller
     public function index()
     {
         $allUsers = User::get()->where('role', 'user');
-        $allProducts = Product::all()->count();
+        $allCategory =category ::all()->count();
+        $allmotorcycle = motorcycle::all()->count();
+        $allreview = review::all()->count();
+        $allReservations = Booking::all()->count();
+        $allmessages = contactus::all()->count();
+
 
         return view('.dashboard', [
             'allUsers' => $allUsers->count(),
-            'allProducts' => $allProducts
+            'allCategory' => $allCategory,
+            'allmotorcycle'=>$allmotorcycle,
+            'allreview'=>$allreview,
+            'allReservations'=>$allReservations,
+            'allmessages'=>$allmessages
+
         ]);
     }
 }

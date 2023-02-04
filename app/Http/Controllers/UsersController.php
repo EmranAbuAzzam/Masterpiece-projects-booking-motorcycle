@@ -92,7 +92,7 @@ class UsersController extends Controller
             'role'=>$request->role
         ]);
         // return redirect()->route('users.index')->with('success','data has been updated successfully');
-        return redirect('users')->with('success', $request->name .' User Data update successfully');
+        return redirect('admin/users')->with('success', $request->name .' User Data update successfully');
     }
 
 
@@ -118,6 +118,6 @@ class UsersController extends Controller
     {
         $userDestroy = User::find($id);
         $userDestroy->destroy($id);
-        return redirect('users')->with('success', 'User Data deleted successfully');
+        return redirect('admin/users')->with('success', 'User Data deleted successfully');
     }
 }

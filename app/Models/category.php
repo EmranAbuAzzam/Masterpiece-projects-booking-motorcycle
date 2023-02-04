@@ -12,7 +12,7 @@ class category extends Model
         'cat_img',
         
     ];
-    public function rooms(){
-        return $this->hasMany(room::class);
+    public function motorcycle(){
+        return $this->hasMany(motorcycle::class);
     }
 }

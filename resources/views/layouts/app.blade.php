@@ -35,8 +35,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/index') }}">
-                    <h5 class="orange-cal">{{"Black Horse Hotel"}}</h5>
+                <a class="navbar-brand" href="/index">
+                    <h5 class="orange-cal">{{"ONLINE BIKE RENTAL"}}</h5>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

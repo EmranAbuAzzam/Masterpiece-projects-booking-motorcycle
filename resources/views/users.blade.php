@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@extends('layouts.nav')
 @section('content')
 
     <div class="container">
@@ -33,9 +33,9 @@
                             <td>{{ $row->email }}</td>
                             <td>{{ $row->role }}</td>
 
-                            <td><a href="{{ route('users.edit', $row->id) }}" class="btn btn-warning btn-sm">Edit</a></td>
+                            <td><a href="{{ route('admin.users.edit', $row->id) }}" class="btn btn-warning btn-sm">Edit</a></td>
 
-                            <form class="float-end" method="post" action="{{ route('users.destroy', $row->id) }}">
+                            <form class="float-end" method="post" action="{{ route('admin.users.destroy', $row->id) }}">
                                 @csrf
                                 @method('DELETE')
                                 <td><input onclick="return confirm('Are you sure you want to delete this movie?')"

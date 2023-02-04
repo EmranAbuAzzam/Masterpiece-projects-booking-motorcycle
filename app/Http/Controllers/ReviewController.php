@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\review;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class ReviewController extends Controller
@@ -40,10 +41,7 @@ class ReviewController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+   
 
     /**
      * Display the specified resource.
@@ -89,6 +87,6 @@ class ReviewController extends Controller
     {
         $userDestroy = review::find($id);
         $userDestroy->destroy($id);
-        return redirect('reviewsAdmin')->with('success', 'User reviews Data deleted successfully');
+        return redirect('admin/reviewsAdmin')->with('success', 'User reviews Data deleted successfully');
     }
 }

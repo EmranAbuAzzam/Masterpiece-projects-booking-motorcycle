@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Booking;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BookingController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
 
     /**
      * Display a listing of the resource.
@@ -14,9 +21,16 @@ class BookingController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
     {
-        return view('pages.booking');
+        
+        $reservations = DB::table('bookings')
+        ->join('users', 'users.id', '=', 'bookings.user_id')
+        ->select('bookings.*', 'users.name')
+        ->get();
+        return view('reservations-Admin',['reservations'=>$reservations]);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -73,7 +87,8 @@ class BookingController extends Controller
         //
     }
 
-    /**
+  
+       /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
@@ -81,6 +96,8 @@ class BookingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $bookingDestroy = Booking::find($id);
+        $bookingDestroy->destroy($id);
+        return redirect('admin/booking')->with('success', 'Reservation Data deleted successfully');
     }
 }

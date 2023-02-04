@@ -1,6 +1,5 @@
 @extends('layouts.app')
-
-@section('content')
+@extends('layouts.nav')
 
 @section('content')
 
@@ -20,7 +19,7 @@
         <table class="table table-striped">
             <thead>
                 <th>Reviewed by</th>
-                <th>Room Number</th>
+                <th>motorcycle Number</th>
                 <th>Review</th>
                 <th>Date</th>
                 <th></th>
@@ -34,13 +33,13 @@
                 @foreach ($reviews as $row)
                     <tr>
                         <td>{{ $row->name }}</td>
-                        <td>{{ $row->room_id }}</td>
+                        <td>{{ $row->motorcycle_id }}</td>
                         <td>{{ $row->Review }}</td>
                         <td>{{ $row->created_at }}</td>
                         <form class="float-end" method="post" action="{{ route('admin.reviewsAdmin.destroy', $row->id) }}">
                             @csrf
                             @method('DELETE')
-                            <td><input onclick="return confirm('Are you sure you want to delete this Room?')" type="submit"
+                            <td><input onclick="return confirm('Are you sure you want to delete this motorcycle?')" type="submit"
                                     class="btn btn-danger btn-sm" value="Delete" /></td>
                         </form>
 

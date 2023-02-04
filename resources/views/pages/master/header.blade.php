@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Hotelier</title>
+    <title>ONLINE BIKE RENTA</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{{ URL::asset('img/favicon.ico"') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,6 +32,10 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ URL::asset('/css/style.css') }}" rel="stylesheet">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
 </head>
 
 <body>
@@ -53,7 +57,7 @@
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
                     <a href="index"
                         class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                        <h3 class="m-0 text-primary text-uppercase">Black Horse Hotel</h3>
+                        <h3 class="m-0 text-primary text-uppercase">ONLINE BIKE RENTAL</h3>
                     </a>
                 </div>
                 <div class="col-lg-9">
@@ -61,11 +65,11 @@
                         <div class="col-lg-7 px-5 text-start">
                             <div class="h-100 d-inline-flex align-items-center py-2 me-4">
                                 <i class="fa fa-envelope text-primary me-2"></i>
-                                <p class="mb-0">info@BlackHorseHotel.com</p>
+                                <p class="mb-0">info@ONLINEBIKERENTAL.com</p>
                             </div>
                             <div class="h-100 d-inline-flex align-items-center py-2">
                                 <i class="fa fa-phone-alt text-primary me-2"></i>
-                                <p class="mb-0">+962796969692</p>
+                                <p class="mb-0">+962796969692  </p>
                             </div>
                         </div>
                         <div class="col-lg-5 px-5 text-end">
@@ -76,7 +80,7 @@
                     </div>
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
                         <a href="index.html" class="navbar-brand d-block d-lg-none">
-                            <h1 class="m-0 text-primary text-uppercase">Hotelier</h1>
+                            <h1 class="m-0 text-primary text-uppercase">ONLINEBIKERENTAL</h1>
                         </a>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
                             data-bs-target="#navbarCollapse">
@@ -84,20 +88,12 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
-                                <a href="index" class="nav-item nav-link active">Home</a>
-                                <a href="about" class="nav-item nav-link">About</a>
-                                <a href="service" class="nav-item nav-link">Services</a>
-                                <a href="{{ route('room') }}" class="nav-item nav-link">Rooms</a>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle"
-                                        data-bs-toggle="dropdown">Pages</a>
-                                    <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="booking" class="dropdown-item">Booking</a>
-                                        <a href="team" class="dropdown-item">Our Team</a>
-                                        <a href="testimonial" class="dropdown-item">Testimonial</a>
-                                    </div>
-                                </div>
-                                <a href="contact" class="nav-item nav-link">Contact</a>
+                                <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
+                                <a href="{{ route('about') }}" class="nav-item nav-link">About</a>
+                               
+                                <a href="{{ route('motorcycle') }}" class="nav-item nav-link">motorcycle</a>
+                           
+                                <a href="{{ route('contactus.index') }}" class="nav-item nav-link">Contact</a>
                             </div>
 
                             {{-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Login</a>

@@ -1,24 +1,13 @@
 <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
     <div class="container pb-5">
         <div class="row g-5">
-            <div class="col-md-6 col-lg-4">
-                <div class="bg-primary rounded p-4">
-                    <a href="index.html">
-                        <h1 class="text-white text-uppercase mb-3">Black Horse Hotel</h1>
-                    </a>
-                    <p class="text-white mb-0">
-                        <a class="text-dark fw-medium" href="index">Black Horse Hotel</a>, every stay is a story. And
-                        it starts with love. We believe luxury – meaningful, personalized, warm – is our love language,
-                        and we deliver it one small act at a time.
-                        .
-                    </p>
-                </div>
-            </div>
+            <div class="col-md-2"> </div>
+           
             <div class="col-md-6 col-lg-3">
                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, AL-Salt, Jordan</p>
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+962796969692</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@BlackHorseHotel.com</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@ONLINEBIKERENTAL.com</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-outline-light btn-social" href="https://twitter.com/"><i
                             class="fab fa-twitter"></i></a>
@@ -34,20 +23,19 @@
                 <div class="row gy-5 g-4">
                     <div class="col-md-6">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                        <a class="btn btn-link" href="about">About Us</a>
-                        <a class="btn btn-link" href="contact">Contact Us</a>
-                        <a class="btn btn-link" href="Privacy Policy">Privacy Policy</a>
-                        <a class="btn btn-link" href="Terms and Condition">Terms & Condition</a>
+                        <a class="btn btn-link" href="/about">About Us</a>
+                        <a class="btn btn-link" href="{{ route('contactus.index') }}">Contact Us</a>
+                       
 
                     </div>
                     <div class="col-md-6">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
-                        <a class="btn btn-link" href="">Food & Restaurant</a>
-                        <a class="btn btn-link" href="">Spa & Fitness</a>
-                        <a class="btn btn-link" href="">Sports & Gaming</a>
-                        <a class="btn btn-link" href="">Event & Party</a>
-                        <a class="btn btn-link" href="">GYM & Yoga</a>
-                    </div>
+                        <a class="btn btn-link" href="#">7/24 motorcycle support</a>
+                        <a class="btn btn-link" href="#">RESERVATION ANYTIME</a>
+                        <a class="btn btn-link" href="#">LOST OF LOCATIONS</a>
+                       
+                  
+                        </div>
                 </div>
             </div>
         </div>
@@ -56,7 +44,7 @@
         <div class="copyright">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">Black Horse Hotel</a>, All Right Reserved.
+                    &copy; <a class="border-bottom" href="#">ONLINE BIKE RENTAL</a>, All Right Reserved.
 
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@extends('layouts.nav')
 
 @section('content')
 
@@ -22,9 +22,9 @@
         <table class="table table-striped">
             <thead>
                 <th>id</th>
-                <th>Category Name</th>
-                <th>Room Category</th>
-                <th>Image</th>
+                <th>motorcycle Category</th>
+                <th>Category Image</th>
+              
                 <th></th>
 
             </thead>
